@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./../fonts/OpenSans/OpenSans-Regular.eot');
+  src: url('./../fonts/opensans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./../fonts/opensans/OpenSans-Regular.woff') format('woff'),
+    url('./../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* =================================== */
 /*	Basic Style 
@@ -70,7 +79,7 @@ span.color {
 
 body > section,
 .footer {
-	padding: 70px 0;
+	padding: 40px 0;
 }
 
 .sec-title {}
@@ -150,6 +159,11 @@ body > section,
 	    -ms-transition: background-color 800ms linear;
          -o-transition: background-color 800ms linear;
 			transition: background-color 800ms linear;
+}
+
+#logo img {
+  height: 40px;
+  width: 40px;
 }
 
 .navbar-toggle i {
@@ -621,28 +635,14 @@ label.error {
 }
 
 .contact-form #form-submit {
-  background: url("../img/envelop.png") no-repeat scroll 0 15px transparent;
-  border: 0 none;
   color: #000;
   font-size: 16px;
   line-height: 24px;
   padding: 10px;
-  text-align: right;
-  width: 150px;
+  text-align: center;
+  width: 200px;
+  border: 1px solid #0b0b61;
 }
-
-.footer-social {
-  margin-top: 17px;
-}
-
-.footer-social li a {
-  color: #0b0b61;
-  display: block;
-  margin-bottom: 10px;
-}
-
-
-
 
 /*=========================================
 	Contact Us
@@ -656,69 +656,19 @@ label.error {
 }
 
 .footer a:hover {
-  color: #062033;
-}
-
-.footer h6 {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: 30px;
-}
-
-.about-us p {
-  line-height: 24px;
-}
-
-.footer-single .subscribe {
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.subscribe #subscribe {
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 2px;
-  height: 40px;
-  text-indent: 10px;
-  width: 100%;
-}
-
-.subscribe #subs {
-  background-color: transparent;
-  border: 0 none;
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 6px;
-}
-
-.footer-single {
-  line-height: 24px;
-}
-
-.footer-single ul {
-  }
-
-.footer-single li {
-  line-height: 32px;
-}
-
-.footer-single p i {
-  margin: 0 10px;
-}
-
-.credit a {
-  color: #062033;
-}
-
-.credit a:hover {
+  font-size: 110%;
+  transition: .5s;
   color: #fff;
 }
+
+.footer a{
+  margin-right: 15px;
+}
+
 
 .copyright {
   color: #fff;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 #back-top {
