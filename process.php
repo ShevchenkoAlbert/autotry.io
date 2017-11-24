@@ -1,6 +1,6 @@
 <?php
 
-    $to = "morshed08@gmail.com";
+    $to = "shevchenko.albert@gmail.com";
     $from = $_REQUEST['name'];
     $subject = $_REQUEST['subject'];
     $name = $_REQUEST['name'];
@@ -10,6 +10,8 @@
     $fields{"name"} = "name";
     $fields{"email"} = "email";
     $fields{"subject"} = "subject";
+    $fields{"telephone"} = "telephone";
+    $fields{"vin"} = "vin";
     $fields{"message"} = "message";
 
     $body = "Here is what was sent:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }

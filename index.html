@@ -17,16 +17,16 @@
 		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- favicon -->
-		 <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+		 <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
 		<!-- CSS
 		================================================== -->
 		<!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 		<!-- Twitter Bootstrap css -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- jquery.fancybox  -->
-        <link rel="stylesheet" href="node_modules/jquery.fancybox/source/jquery.fancybox.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
 		<!-- animate -->
         <link rel="stylesheet" href="css/animate.css">
 		<!-- Main Stylesheet -->
@@ -62,8 +62,8 @@
 					
 					<!-- logo -->
                     <a class="navbar-brand" href="#body">
-						<h1 id="logo">
-							<img src="img/autoTry_logo.png" alt="Autotry">
+						<h1 id="logo" class="row">
+							<strong>AUTO</strong>TRY
 						</h1>
 					</a>
 					<!-- /logo -->
@@ -98,7 +98,7 @@
 					<!-- single slide -->
 					<div class="item active" >
 						<div class="carousel-caption">
-							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Auto<span>Try</span></h2>
+							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><img src="img/LogoNameFinal-ТЕНЬ.png" alt="logo"></h2>
 							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated">Все виды автозапчастей</h3>
 							
 							<ul class="social-links text-center">
@@ -411,7 +411,7 @@
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
 							<div class="counters-item">
-								<i class="fa fa-car fa-3x"></i>
+								<i class="fa fa-cubes fa-3x"></i>
 								<p>Более</p>
 								<strong data-to="300000">0</strong>
 								<!-- Set Your Number here. i,e. data-to="56" -->
@@ -420,7 +420,7 @@
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
 							<div class="counters-item">
-								<i class="fa fa-cubes fa-3x"></i>
+								<i class="fa fa-car fa-3x"></i>
 								<p>Более</p>
 								<strong data-to="600">0</strong>
 								<!-- Set Your Number here. i,e. data-to="56" -->
@@ -463,8 +463,8 @@
 							<p>+38 (068) 638 58 48</p>
 							<p>+38 (095) 638 58 48</p>
 							<p>+38 (067) 773 07 37 (Viber, WhatsApp)</p>
-							<p>email: autotryua@gmail.com</p>
-							<p>Telegram: @AutoTry_bot</p>
+							<p><span class="black">email:</span> autotryua@gmail.com</p>
+							<p><span class="black">Telegram:</span> @AutoTry_bot</p>
 						</div>
 					</div>
 					<!-- end contact address -->
@@ -473,20 +473,20 @@
 					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
 							
-							<form action="#" id="contact-form">
+							<form action="process.php" id="contact-form">
 								<div class="input-group input-field">
-									<input name="name" id="message" placeholder="Имя" class="form-control">
+									<input name="name" id="name" placeholder="Имя" class="form-control">
 								</div>
 								<div class="input-group name-email">
 									<div class="input-field">
-										<input type="number" name="name" id="name" placeholder="Телефон" class="form-control">
+										<input type="text" name="telephone" id="telephone" placeholder="Телефон" class="form-control">
 									</div>
 									<div class="input-field">
 										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
 									</div>
 								</div>
 								<div class="input-group">
-									<input name="name" id="message" placeholder="VIN" class="form-control">
+									<input name="vin" id="vin" placeholder="VIN" class="form-control">
 								</div>
 								<div class="input-group">
 									<textarea name="message" id="message" placeholder="Список запчастей" class="form-control"></textarea>
@@ -539,9 +539,9 @@
 		<!-- Single Page Nav -->
         <script src="js/jquery.singlePageNav.min.js"></script>
 		<!-- Twitter Bootstrap -->
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 		<!-- jquery.fancybox.pack -->
-        <script src="node_modules/jquery.fancybox/source/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
 		<!-- jquery.mixitup.min -->
         <script src="js/jquery.mixitup.min.js"></script>
 		<!-- jquery.parallax -->
@@ -557,6 +557,7 @@
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
         <script src="js/wow.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
 		<script>
 			var wow = new WOW ({
 				boxClass:     'wow',      // animated element css class (default is wow)
@@ -583,25 +584,31 @@
 							required: true,
 							minlength: 2
 						},
+						telephone: {
+							required: true
+						},
 						email: {
 							required: true,
 							email: true
 						},
+						vin: {
+							required: false
+						},
 						message: {
-							required: true
+							required: false,
 						}
 					},
 					messages: {
 						name: {
-							required: "come on, you have a name don't you?",
-							minlength: "your name must consist of at least 2 characters"
+							required: "у Вас наверняка есть имя",
+							minlength: "Может имя длиннее 2-х символов?"
+						},
+
+						telephone: {
+							required: "с номером мы быстрее Вам поможем"
 						},
 						email: {
-							required: "no email, no message"
-						},
-						message: {
-							required: "um...yea, you have to write something to send this form.",
-							minlength: "thats all? really?"
+							required: "Извини без почты сейчас никуда"
 						}
 					},
 					submitHandler: function(form) {
@@ -613,7 +620,7 @@
 								$('#contact-form :input').attr('disabled', 'disabled');
 								$('#contact-form').fadeTo( "slow", 0.15, function() {
 									$(this).find(':input').attr('disabled', 'disabled');
-									$(this).find('label').css('cursor','default');
+									$(this).find('label').css('cursor','pointer');
 									$('#success').fadeIn();
 								});
 							},
