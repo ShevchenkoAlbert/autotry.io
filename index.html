@@ -33,7 +33,6 @@
         <link rel="stylesheet" href="css/main.css">
 		<!-- media-queries -->
         <link rel="stylesheet" href="css/media-queries.css">
-
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -473,7 +472,12 @@
 					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
 							
-							<form action="#" id="contact-form">
+							<form id="contact-form">
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="AutoTry">
+								<input type="hidden" name="admin_email" value="shevchenko.albert@gmail.com">
+								<input type="hidden" name="form_subject" value="Заявка с сайта">
+								<!-- END Hidden Required Fields -->
 								<div class="input-group input-field">
 									<input name="name" id="name" placeholder="Имя" class="form-control">
 								</div>
@@ -557,6 +561,7 @@
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
         <script src="js/wow.min.js"></script>
+        
         <script src="js/jquery.mask.min.js"></script>
 		<script>
 			var wow = new WOW ({
@@ -572,7 +577,7 @@
 		<!-- Custom Functions -->
         <script src="js/custom.js"></script>
 		
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			$(function(){
 				/* ========================================================================= */
 				/*	Contact Form
@@ -633,6 +638,6 @@
 					}
 				});
 			});
-		</script>
+		</script> -->
     </body>
 </html>
