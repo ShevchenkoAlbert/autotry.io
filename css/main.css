@@ -208,12 +208,14 @@ body > section,
 
 #slider {
 	padding: 0;
-    background: url(../img/oil2.jpg);
-    background-size: cover;
+  background: url(../img/oil2.jpg);
+  background-size: cover;
 }
  #slider img {
-  height: 350px;
-  width: 450px;
+  margin-left: 284px;
+  margin-bottom: 30px;
+  height: auto;
+  width: 800px;
  }
 
 .carousel-caption {
@@ -234,7 +236,7 @@ body > section,
 .carousel-caption h3 {
   font-size: 42px;
   font-weight: 300;
-  margin: -20px 0 20px;
+  margin: 0;
 }
 
 .carousel-caption p {
@@ -260,7 +262,7 @@ top: -8px;
 }
 
 .social-links {
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .social-links li {
@@ -656,13 +658,18 @@ label.error {
 }
 
 .contact-form #form-submit {
-  color: #e1b919;
+  color: #0b0b61;
   font-size: 16px;
   line-height: 24px;
   padding: 10px;
   text-align: center;
   width: 200px;
-  border: 1px solid #e1b919;
+  border: 1px solid #0b0b61;
+}
+
+.contact-form #form-submit:hover {
+  background: #e1b919;
+  color: #062033;
 }
 
 /*=========================================
