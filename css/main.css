@@ -614,7 +614,7 @@ top: -8px;
   margin-bottom: 25px;
 }
 
-.contact-address p {
+.contact-address .contact-number {
   line-height: 24px;
   color: #0b0b61;
 }
