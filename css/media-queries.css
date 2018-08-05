@@ -262,6 +262,12 @@ background-position: center top !important;
 
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .contact-address .contact-number {
+    line-height: 24px;
+    color: #0b0b61;
+  }
+}
 
 /*============================================================
 	Mobile (Landscape) Design for a width of 480px
