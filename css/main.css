@@ -616,7 +616,7 @@ top: -8px;
 
 .contact-address .contact-number {
   line-height: 24px;
-  color: #0b0b61;
+  color: #0b0b61 !important;
 }
 
 .black {
