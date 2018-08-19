@@ -209,6 +209,10 @@ background-position: center top !important;
   line-height: 24px;
   color: #0b0b61 !important;
 }
+.contact-address .contact-number a {
+  line-height: 24px;
+  color: #0b0b61 !important;
+}
 /* works */
 
 .work-item {
