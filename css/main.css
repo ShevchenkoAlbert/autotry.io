@@ -618,10 +618,15 @@ top: -8px;
   line-height: 24px;
   color: #0b0b61 !important;
 }
-.contact-address .contact-number a {
-  line-height: 24px;
-  color: #0b0b61 !important;
-}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+  .contact-number a {
+    line-height: 24px;
+    color: #0b0b61 !important;
+  }
+}}
+
 .black {
   color: black;
 }
